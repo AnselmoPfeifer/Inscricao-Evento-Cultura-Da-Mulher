@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>Curso de Extensão Cultura da Mulher / 2015</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulário de Inscrição no "Curso de Extensão Cultura da Mulher / 2015">
+  <meta name="author" content="Anselmo Pfeifer">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/valida_formulario.js"></script>
+
+
+</head>
+
+<body style="background-color: #444444">
+<div class="container" style="background-color: white; border-radius: 20px; border-style: double; border-color:#8E05F0">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="page-header"  style="text-align:center; padding-top:5px; padding-bottom:10px; background-color: wheat; border-radius: 20px;">
+						<h2><font>
+							<strong style="color:#285e8e;;"><p>FICHA DE INSCRIÇÃO  </p>
+                            	"Curso de Extensão <b style="border-bottom: double; border-color:#F005BD">Cultura da Mulher</b> / 2015"</strong></font>
+                      </h2>
+					</div>
+				</div>
+			</div>
+
+            <!--Formulario-->
+            <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data" name="inscricao"  id="inscricao" onSubmit="JavaScript:return checarDados()"/>
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+                <p><strong>Nome Completo:</strong>
+                    <input class="input-sm" type="text" id="inscricao_nome" name="inscricao_nome" placeholder="Nome Completo" size="70"
+                           required="required" maxlength="100" required="required"/>
+                </p>
+                <p><strong>Identidade</strong>:
+                    <input class="input-sm" type="text" id="inscricao_identidade" name="inscricao_identidade" placeholder="Identidade" size="29" required="required" maxlength="15" pattern="[0-9]+$" />
+
+                <strong>Orgão Emissor:</strong>
+                    <input class="input-sm" type="text" id="inscricao_emissoridt" name="inscricao_emissoridt" placeholder="Orgão Emissor:" size="25" required="required"/>
+                </p>
+
+
+
+
+                <p><strong>Endereço: </strong>
+                    <input class="input-sm" type="text" id="inscricao_endereco" name="inscricao_endereco" placeholder="Endereço" size="46" maxlength="150" required="required"/>
+                    <strong>Número: </strong>
+                    <input class="input-sm" type="text" id="inscricao_numero" name="inscricao_numero" placeholder="Número" size="16" required="required"/>
+                </p>
+
+                    <strong>Bairro: </strong>
+                    <input class="input-sm" type="text" id="inscricao_bairro" name="inscricao_bairro" placeholder="Bairro" size="53" required="required"  maxlength="100"/>
+                    <strong>CEP: </strong>
+                    <input class="input-sm" type="text" id="inscricao_cep" name="inscricao_cep" placeholder="CEP" size="16" required="required" OnKeyPress="formatar('##.###-###', this)" maxlength="10"/>
+
+                    </p>
+                    <p><strong>Cidade:</strong> <input class="input-sm" type="text" id="inscricao_cidade" name="inscricao_cidade" placeholder="Cidade" size="43" required="required"/>
+                        <strong> Estado: </strong><select name="inscricao_estado" id="inscricao_estado" class="input-sm" required="required">
+                            <option value=""></option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </p>
+
+                    <p>
+
+                    <strong>E-mail: </strong>
+                    <input class="input-sm" type="text" id="inscricao_email" name="inscricao_email"  size="44" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Digite seu e-mal..." required="required"/>
+                    <strong>Telefone: </strong>
+                    <input class="input-sm" type="text" id="inscricao_telefone" name="inscricao_telefone" placeholder="(67)-9999-9999" size="16" OnKeyPress="formatar('##-####-####', this)"  maxlength="12"/>
+                </p>
+				</div>
+			</div>
+			<hr>
+            <p>
+                <b>Selecione uma Opção:</b>
+                <select id="inscricao_frequencia" name="inscricao_frequencia" class="input-sm" required="true">
+                    <option value=""> </option>
+                    <option value="Dependente de Militar">Dependente de Militar</option>
+
+                    <option value="Militar Feminino">Militar Feminino</option>
+                    <option value="Militar Feminino">Convidada </option>
+
+                </select>
+            </p>
+
+			<hr>
+
+            <p><b> Dados do Cônjuge / Militar Vinculado</b>:</p>
+            <p><b>Posto / Graduação:</b>
+            <select id="inscricao_frequencia" name="inscricao_frequencia" class="input-sm" required="true">
+                <option value="">                    </option>
+                <option value="Militar da Reserva">Militar da Reserva</option>
+
+
+                <option value="Coronel">Coronel</option>
+                <option value="Tenente Coronel">Tenente Coronel</option>
+                <option value="Major">Major</option>
+                <option value="Capitao">Capitao</option>
+                <option value="1º Tenente">1º Tenente</option>
+                <option value="2º Tenente">2º Tenente</option>
+                <option value="1º Sargento">1º Sargento</option>
+                <option value="2º Sargento">2º Sargento</option>
+                <option value="3º Sargento">3º Sargento</option>
+                <option value="Civil">Civil</option>
+
+            </select>
+            </p>
+            <p>
+            <b>Nome completo: </b><input class="input-sm" type="text" id="inscricao_nome" name="inscricao_nome" placeholder="Nome Completo" size="70" required="true"><br></p>
+            <p><b>Local de trabalho: </b><input class="input-sm" type="text" id="inscricao_nome" name="inscricao_nome" placeholder="Organização Militar" size="68" ></p>
+	<div class="row clearfix">
+	  <div class="col-md-12 column" style="text-align: center">
+
+                    <input class="btn-sm btn-success" type="submit" name="enviar" id="enviar" value="Enviar Cadastro" onClick="valida()" style="border-radius: 10px;"/>
+                    <input class="btn-sm btn-warning" type="reset"X name="cancelar" id="cancelar" value="Cancelar" style="border-radius: 10px"/>
+				</p>
+	  </div>
+	</div>
+    </form>
+</div>
+</body>
+</html>
