@@ -43,15 +43,18 @@
 				<div class="col-md-12 column">
 					<div class="page-header"  style="text-align:center; padding-top:5px; padding-bottom:10px; background-color: wheat; border-radius: 20px;">
 						<h2><font>
-							<strong style="color:#285e8e;;"><p>FICHA DE INSCRIÇÃO  </p>
-                            	"Curso de Extensão <b style="border-bottom: double; border-color:#F005BD">Cultura da Mulher</b> / 2015"</strong></font>
+							<strong style="color:#285e8e;;"><p>FICHA DE INSCRIÇÃO  </p></strong>
+                            <strong style="color:#285e8e; border-bottom: double; border-color:#F005BD">Curso de Extensão Cultural da Mulher / 2015</strong>
+
+                            </font>
                       </h2>
+
 					</div>
 				</div>
 			</div>
 
             <!--Formulario-->
-            <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data" name="inscricao"  id="inscricao" onSubmit="JavaScript:return checarDados()"/>
+            <form action="enviar.php" method="post" class="form-horizontal" enctype="multipart/form-data" name="inscricao"  id="inscricao" onSubmit="JavaScript:return checarDados()"/>
 			<div class="row clearfix">
 				<div class="col-md-12 column">
                 <p><strong>Nome Completo:</strong>
@@ -64,11 +67,7 @@
                 <strong>Orgão Emissor:</strong>
                     <input class="input-sm" type="text" id="inscricao_emissoridt" name="inscricao_emissoridt" placeholder="Orgão Emissor:" size="25" required="required"/>
                 </p>
-
-
-
-
-                <p><strong>Endereço: </strong>
+                    <p><strong>Endereço: </strong>
                     <input class="input-sm" type="text" id="inscricao_endereco" name="inscricao_endereco" placeholder="Endereço" size="46" maxlength="150" required="required"/>
                     <strong>Número: </strong>
                     <input class="input-sm" type="text" id="inscricao_numero" name="inscricao_numero" placeholder="Número" size="16" required="required"/>
@@ -80,36 +79,16 @@
                     <input class="input-sm" type="text" id="inscricao_cep" name="inscricao_cep" placeholder="CEP" size="16" required="required" OnKeyPress="formatar('##.###-###', this)" maxlength="10"/>
 
                     </p>
-                    <p><strong>Cidade:</strong> <input class="input-sm" type="text" id="inscricao_cidade" name="inscricao_cidade" placeholder="Cidade" size="43" required="required"/>
+                    <p><strong>Cidade:</strong> <input class="input-sm" type="text" id="inscricao_cidade" name="inscricao_cidade" placeholder="Cidade" size="43"
+                                                       required="required" value="Campo Grande" disabled/>
+
+                        <input class="input-sm" type="hidden" id="inscricao_cidade" name="inscricao_cidade" placeholder="Cidade" size="43"
+                               required="required" value="Campo Grande" disabled/>
+
                         <strong> Estado: </strong><select name="inscricao_estado" id="inscricao_estado" class="input-sm" required="required">
-                            <option value=""></option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
+
                             <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="TO">Tocantins</option>
+
                         </select>
                     </p>
 
@@ -118,17 +97,17 @@
                     <strong>E-mail: </strong>
                     <input class="input-sm" type="text" id="inscricao_email" name="inscricao_email"  size="44" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Digite seu e-mal..." required="required"/>
                     <strong>Telefone: </strong>
-                    <input class="input-sm" type="text" id="inscricao_telefone" name="inscricao_telefone" placeholder="(67)-9999-9999" size="16" OnKeyPress="formatar('##-####-####', this)"  maxlength="12"/>
+                    <input class="input-sm" type="text" id="inscricao_telefone" name="inscricao_telefone" placeholder="(67)-9999-9999" size="16"
+                           OnKeyPress="formatar('##-####-####', this)"  maxlength="12" required="true"/>
                 </p>
 				</div>
 			</div>
 			<hr>
             <p>
                 <b>Selecione uma Opção:</b>
-                <select id="inscricao_frequencia" name="inscricao_frequencia" class="input-sm" required="true">
+                <select id="inscricao_militar" name="inscricao_militar" class="input-sm" required="true">
                     <option value=""> </option>
                     <option value="Dependente de Militar">Dependente de Militar</option>
-
                     <option value="Militar Feminino">Militar Feminino</option>
                     <option value="Militar Feminino">Convidada </option>
 
@@ -137,13 +116,11 @@
 
 			<hr>
 
-            <p><b> Dados do Cônjuge / Militar Vinculado</b>:</p>
+            <p><b> Dados do Militar Vinculado ao Participante (Cônjuge, Responsável ou Coordenador)</b>:</p>
             <p><b>Posto / Graduação:</b>
-            <select id="inscricao_frequencia" name="inscricao_frequencia" class="input-sm" required="true">
+            <select id="inscricao_siatuacao" name="inscricao_situacao" class="input-sm" required="true">
                 <option value="">                    </option>
                 <option value="Militar da Reserva">Militar da Reserva</option>
-
-
                 <option value="Coronel">Coronel</option>
                 <option value="Tenente Coronel">Tenente Coronel</option>
                 <option value="Major">Major</option>
@@ -158,8 +135,8 @@
             </select>
             </p>
             <p>
-            <b>Nome completo: </b><input class="input-sm" type="text" id="inscricao_nome" name="inscricao_nome" placeholder="Nome Completo" size="70" required="true"><br></p>
-            <p><b>Local de trabalho: </b><input class="input-sm" type="text" id="inscricao_nome" name="inscricao_nome" placeholder="Organização Militar" size="68" ></p>
+            <b>Nome completo: </b><input class="input-sm" type="text" id="inscricao_nome_militar" name="inscricao_nome_militar" placeholder="Nome Completo" size="70" required="true"><br></p>
+            <p><b>Local de trabalho: </b><input class="input-sm" type="text" id="inscricao_om" name="inscricao_om" placeholder=" " size="68" ></p>
 	<div class="row clearfix">
 	  <div class="col-md-12 column" style="text-align: center">
 
